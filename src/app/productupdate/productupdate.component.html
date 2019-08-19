@@ -1,0 +1,56 @@
+<div class="container-fluid bg-light">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+
+            <h1>Product Entry</h1>
+            <hr>
+            
+            <form #updateform="ngForm" (ngSubmit)="update(updateform.value)">
+            
+            <div class="form-row">
+            
+                <div class="form-group col-lg-6">
+                  <label for="inputName">Product Name</label>
+                  <input type="text" name="productname" #productname='ngModel' [(ngModel)]="updatedata.productname" class="form-control" id="productname" placeholder="Product Name">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="inputAge">Product Description</label>
+                  <input type="text" name="productdescription" #productdescription='ngModel' [(ngModel)]="updatedata.productdescription" class="form-control" id="productdescription" placeholder="Product Description">
+                </div>
+            
+            </div>
+            
+            
+            <div class="form-row">
+            
+                <div class="form-group col-lg-6">
+                  <label for="inputName">Product Cost</label>
+                  <input type="text" name="productcost" #productcost='ngModel' [(ngModel)]="updatedata.productcost" class="form-control" id="productcost" placeholder="Product Cost">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="inputAge">Product Category</label>
+                  <input type="text" name="productcategory" #productcategory='ngModel' [(ngModel)]="updatedata.productcategory" class="form-control" id="productcategory" placeholder="Product Category">
+                </div>
+            
+            </div>
+            
+            <div class="form-group">
+                <label for="inputName">Product Discount</label>
+                <input type="text" name="productdiscount" #productdiscount='ngModel' [(ngModel)]="updatedata.productdiscount" class="form-control" id="productdiscount" placeholder="Product Discount">
+              </div>
+            
+              <div class="form-group">
+                  <label for="inputName">Product Image</label>
+                  <input type="text" name="productimage" #productimage='ngModel' [(ngModel)]="updatedata.productimage" class="form-control" id="productimage" placeholder="Product Image">
+                </div>
+            
+            
+                <button type="submit" class="btn btn-primary">Submit</button>
+            
+            
+            
+              </form>
+            
+
+        </div></div></div></div>
