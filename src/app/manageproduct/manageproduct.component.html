@@ -1,0 +1,100 @@
+<!-- <div class="container">
+<div class="row">
+   <div class="col-lg-12">
+        <table class="table table-striped">
+                <thead>
+                  <tr class="bg-primary table-header">
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Description</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of data">
+                    <th scope="row">{{d.productname}}</th>
+                    <td>{{d.productdescription}}</td>
+                    <td><button class="btn btn-sm btn-primary" [routerLink]="['/update', d.id]">Edit</button></td>
+                    <td><button class="btn btn-sm btn-primary" (click)="delete(d.id)">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+   </div> 
+</div>
+</div> -->
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+    
+    
+            <input
+            type="text"
+            style="padding:8px;margin:15px auto;width:30%;"
+            placeholder="Type to filter the name column..."
+            #search
+            (keyup)="updateFilter(search.value)"
+          />
+          <ngx-datatable
+            #table
+            class="material"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'50'"
+            [limit]="10"
+            [rows]="temp"
+          >
+
+
+          <ngx-datatable-column name="Product Name" prop="productname">
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+              </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column name="Product Description" prop="productdescription">
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+              </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column name="Edit" prop="id">
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <button class="btn btn-sm btn-primary" [routerLink]="['/update', value]">Edit</button>
+              </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column name="Delete" prop="id" >
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-sm btn-primary" (click)="delete(value)">Delete</button>
+            </ng-template>
+        </ngx-datatable-column>
+
+          
+          </ngx-datatable>
+    
+    
+    
+    
+    </div>  
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

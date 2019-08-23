@@ -1,0 +1,47 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+
+
+        <input
+        type="text"
+        style="padding:8px;margin:15px auto;width:30%;"
+        placeholder="Type to filter the name column..."
+        #search
+        (keyup)="updateFilter(search.value)"
+      />
+      <ngx-datatable
+        #table
+        class="material"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'50'"
+        [limit]="10"
+        [rows]="temp"
+      >
+      </ngx-datatable>
+
+
+
+
+</div>  
+</div>
+</div>
+
+
+
+
+
+
+<div class="row">
+  <div class="columns">
+      <button (click)="toggleMove()">Press me for animation</button>
+  </div>
+  <div class="columns">
+      <div id="content" [@focusPanel]='state' [@movePanel]='state'>Look at me animate</div>
+  </div>
+</div>
+  
+  

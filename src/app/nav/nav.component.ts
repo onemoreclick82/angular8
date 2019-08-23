@@ -12,12 +12,14 @@ export class NavComponent implements OnInit {
   user: firebase.User;
 
   constructor(private eauth:AngularFireAuth) {
-  this.eauth.authState.subscribe(x=> {this.user = x
-  console.log("user "+ x.displayName);
-  }
+  this.eauth.authState.subscribe(x=> {this.user = x}
   );
-   
-   }
+  }
+
+
+  logout(){
+  this.eauth.auth.signOut();
+  }
 
   ngOnInit() {
   }

@@ -8,13 +8,9 @@
           <p class="card-text">{{d.productdescription}}</p>
           <ul><li>{{d.productcost}}</li><li>{{d.productdiscount}}</li></ul>
          <p>{{d.productcategory}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Add To Cart</a>
         </div>
       </div>   
 </div>
 </div>
 </div>
-
-<ul *ngFor="let d of data">
-    <li>{{d.productname}}   <button class="btn btn-sm btn-primary" [routerLink]="['/update', d.id]">Edit</button> &nbsp; <button class="btn btn-sm btn-primary" (click)="delete(d.id)">Delete</button></li>
-</ul>

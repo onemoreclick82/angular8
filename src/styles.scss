@@ -1,2 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
 .navbar{padding-left: 0px; padding-right: 0px;}
+.datatable-body-cell{height: 50px !important;}
+.datatable-row-group{ height: 50px !important;}
+.datatable-header{height: 50px !important;}
+.datatable-body-row{height: 50px !important;}
+.ngx-datatable.material .datatable-header .resize-handle{border-right: 1px solid rgba(0, 0, 0, 0.12);}
