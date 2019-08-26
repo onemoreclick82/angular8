@@ -32,8 +32,22 @@ export class ProductsComponent implements OnInit, OnDestroy  {
       this.dataser.deletedata(id);
     }
 
+    addtocart(product:Datatype){
+    this.dataser.addproductcart(product);
+    }
+
+
+
+
+
+
+
+
+
   ngOnInit() {
     this.fetchdata();
+
+    // console.log(this.dataser.getcartid());
   }
 
   ngOnDestroy(){

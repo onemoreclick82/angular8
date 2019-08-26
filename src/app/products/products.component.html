@@ -8,7 +8,7 @@
           <p class="card-text">{{d.productdescription}}</p>
           <ul><li>{{d.productcost}}</li><li>{{d.productdiscount}}</li></ul>
          <p>{{d.productcategory}}</p>
-          <a href="#" class="btn btn-primary">Add To Cart</a>
+          <a class="btn btn-primary" (click)="addtocart(d)">Add To Cart</a>
         </div>
       </div>   
 </div>
